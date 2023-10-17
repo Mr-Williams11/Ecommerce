@@ -1,0 +1,248 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navbar */
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    color: red;
+    width: 100%;
+    height: 60px;
+    max-width: 1200px;
+}
+.navbar ul{
+    display: flex;
+    list-style: none;
+    margin: 20px 0px;
+}
+.navbar ul li{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-large;
+    font-weight: bold;
+}
+.navbar ul li a{
+    color: white;
+    text-decoration: none;
+    color: white(252, 252, 249);
+    padding: 8px 25px;
+    transition: all .5s ease;
+}
+.navbar ul li a:hover{
+    background-color: rgb(250, 4, 4);
+    color: white(8, 218, 237);
+    box-shadow: 0 0 10px rgb(1, 1, 252);
+}
+
+/* Home Section */
+#home{
+    display:flex;
+    flex-direction: column;
+    height: 840px;
+    justify-content: center;
+    text-align: center;
+    color: rgb(250, 250, 251);
+}
+#home::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: black;
+    background-attachment: fixed;
+    height: 900px;
+    width: 100%;
+    z-index: -1;
+    opacity: 1.5;
+}
+.main{
+    display: flex;
+    flex-direction: column;
+    /*border: 1px solid  white;*/
+    align-items: center;
+    position: absolute;
+    top: 30%;
+    right: 10%;
+}
+.headings{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 3rem;
+    text-align: center;
+    margin: 40px 0px;
+}
+
+span{
+    color: rgb(255, 0, 0);
+}
+.btn{
+    padding: 10px 35px;
+    background-color: transparent;
+    border: 1px solid rgb(28, 5, 239);
+    color: rgb(250, 249, 249);
+    outline: none;
+    transition: .6s ease;
+}
+.btn:hover{
+    cursor: pointer;
+    background-color: red;
+    color: white;
+    box-shadow: blue;
+    font-weight: bold;
+} 
+
+/* About Section */
+
+#about{
+    display: flex;
+    flex-direction: column;
+}
+#intro{
+    text-align: center;
+    padding: 10px;
+}
+
+#intro h2{
+    font-family: 'Times New Roman', Times, serif;
+    text-align: left;
+}
+
+/* Cuts Section */
+.heading{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 3rem;
+    text-align: left;
+    margin: 0px 40px;
+}
+img{
+    width: 500px;
+    height: 300px;
+    align-items: center;
+}
+
+#home{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "heading1   heading    heading2"
+    "pic1      pic2       pic3"
+    ;
+}
+.head {
+    grid-area: heading;
+    text-align: center;
+    border: auto;
+}
+
+.head h1{
+        text-align: center;
+}
+
+#taper{
+    grid-area: pic1;
+    width: auto;
+    height: 300px;
+}
+
+#taper h2{
+    text-align: center;
+}
+
+#mullet{
+    grid-area: pic2;
+    width: auto;
+    height: 300px;
+    align-items: center;
+}
+#mullet h2{
+    text-align: center;
+}
+
+#beard{
+    grid-area: pic3;
+    width: 500px;
+    height: 300px;
+    align-items: center;
+}
+#beard h2{
+    text-align: center;
+}
+
+
+/* Contact Section */
+#contact{
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    background-color: transparent;
+    color: aliceblue;
+    padding: 20px;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    align-items: center;
+    margin: 20px 0px;
+}
+.input{
+    padding: 12px;
+    margin: 15px;
+    width: 30%;
+    border: none;
+    outline: none;
+}
+#send{
+    padding: 10px;
+    width: 30%;
+    margin: 40px;
+    border: none;
+    outline: none;
+}
+#send:hover{
+    background-color: black;
+    color: rgb(8, 218, 237);
+    box-shadow: 0 0 10px rgb(1, 1, 4);
+    cursor: pointer;
+    box-shadow: 0 0 10px white;
+}
+
+/* Media query */
+@media screen and (max-width){
+    
+}
+
+@keyframes example {
+    0%   {background-color: red;}
+    25%  {background-color: blue;}
+    50%  {background-color: red;}
+    100% {background-color: blue;}
+  }
+
+  .heading{
+    animation-iteration-count: infinite;
+    background-color: red;
+    animation-name: example;
+    animation-duration: 4s;
+    position: relative;
+  }
+  
+  @keyframes About {
+    0%   {color: red;}
+    25%  {color: blue;}
+    50%  {color: red;}
+    75%  {color: blue;}
+    100% {color: red;}
+  }
+  #intro h2{
+    animation-iteration-count: infinite;
+    color: red;
+    animation-name: About;
+    animation-duration: 4s;
+    position: relative;
+  }
