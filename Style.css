@@ -9,12 +9,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: sticky;
     top: 0;
     color: red;
     width: 100%;
     height: 60px;
     max-width: 1200px;
+    z-index: 0;
 }
 .navbar ul{
     display: flex;
@@ -34,9 +34,9 @@
     transition: all .5s ease;
 }
 .navbar ul li a:hover{
-    background-color: rgb(250, 4, 4);
-    color: white(8, 218, 237);
-    box-shadow: 0 0 10px rgb(1, 1, 252);
+    background-color: red;
+    color: black;
+    box-shadow: 0 0 10px darkgoldenrod;
 }
 
 /* Home Section */
@@ -81,19 +81,24 @@
 span{
     color: red;
 }
+
+.hot{
+    color: orange;
+}
+
 .btn{
     padding: 10px 35px;
     background-color: transparent;
-    border: 1px solid rgb(28, 5, 239);
+    border: 1px solid red;
     color: rgb(250, 249, 249);
     outline: none;
     transition: .6s ease;
 }
 .btn:hover{
     cursor: pointer;
-    background-color: red;
-    color: white;
-    box-shadow: blue;
+    background-color: darkgoldenrod;
+    color: black;
+    box-shadow: red;
     font-weight: bold;
 } 
 
@@ -265,15 +270,16 @@ img{
 }
 
 @keyframes example {
-    0%   {background-color: black;}
-    25%  {background-color: aqua;}
-    50%  {background-color: black;}
-    100% {background-color: aqua;}
+    0%   {background-color: orangered;}
+    25%  {background-color: red;}
+    50%  {background-color: orangered;}
+    75% {background-color: red;}
+    100%  {background-color: orangered;}
   }
 
   .heading{
     animation-iteration-count: infinite;
-    background-color: black;
+    background-color: orangered;
     animation-name: example;
     animation-duration: 4s;
     position: relative;
@@ -281,7 +287,7 @@ img{
   @keyframes About {
     0%   {color: orange;}
     25%  {color: red;}
-    50%  {color: blue;}
+    50%  {color: rgb(234, 255, 0);}
     75%  {color: orange;}
     100% {color: red;}
   }
@@ -290,6 +296,22 @@ img{
     animation-iteration-count: infinite;
     color: red;
     animation-name: About;
+    animation-duration: 4s;
+    position: relative;
+  }
+
+  @keyframes Home {
+    0%   {color: orange;}
+    25%  {color: red;}
+    50%  {color: rgb(234, 255, 0);}
+    75%  {color: orange;}
+    100% {color: red;}
+  }
+
+  .hot{
+    animation-iteration-count: infinite;
+    color: red;
+    animation-name: Home;
     animation-duration: 4s;
     position: relative;
   }
