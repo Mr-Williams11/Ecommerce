@@ -10,16 +10,18 @@
     justify-content: space-between;
     align-items: center;
     top: 0;
-    color: red;
+    color: white;
+    background-color: black;
+    position: sticky;
     width: 100%;
     height: 60px;
-    max-width: 1200px;
-    z-index: 0;
+    z-index: 1;
 }
 .navbar ul{
     display: flex;
     list-style: none;
     margin: 20px 0px;
+    
 }
 .navbar ul li{
     font-family: Arial, Helvetica, sans-serif;
@@ -29,15 +31,16 @@
 .navbar ul li a{
     color: white;
     text-decoration: none;
-    color: white(252, 252, 249);
     padding: 8px 25px;
     transition: all .5s ease;
+    width: 100%;
 }
 .navbar ul li a:hover{
     background-color: red;
     color: black;
     box-shadow: 0 0 10px darkgoldenrod;
 }
+
 
 /* Home Section */
 #home{
@@ -53,12 +56,6 @@
     position: absolute;
     top: 0;
     right: 0;
-    background-image:url(Background.jpg);
-    filter: brightness(50%);
-    background-size: cover;
-    background-attachment: fixed;
-    height: 1200px;
-    width: 100%;
     z-index: -1;
     opacity: 0.9;
 }
@@ -102,25 +99,33 @@ span{
     font-weight: bold;
 } 
 
+body{
+    background-image:url(Background.jpg);
+    background-size: 100%;
+    background-attachment: fixed;
+}
+
 /* About Section */
 
-#about{
-    display: flex;
-    flex-direction: column;
-}
+
 #intro{
     padding-left: 50px;
-    padding-right: 50px;
 }
 
 #intro h2{
-    font-family: 'Times New Roman', Times, serif;
-    text-align: center;
+    font-size: 2.8rem;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 700px;
+    text-align: left;
+    letter-spacing: 2px;
 }
 
-#intro h2 p{
-    text-align: center;
-    font-family: 'Times New Roman', Times, serif;
+#intro p{
+    color: aliceblue;
+    padding-left: 700px;
+    font-size: 1rem;
+    text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 
@@ -139,6 +144,7 @@ img{
 
 #home{
     display: grid;
+    margin: 2px;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-areas: 
@@ -162,7 +168,12 @@ img{
     grid-area: pic1;
     width: 500px;
     height: 300px;
-    margin: 30px;
+    margin: 45px;
+    filter: grayscale(75%);
+}
+
+#taper:hover{
+    filter: grayscale(0%);
 }
 
 #taper h2{
@@ -174,7 +185,12 @@ img{
     width: 500px;
     height: 300px;
     align-items: center;
-    margin: 30px;
+    margin: 45px;
+    filter: grayscale(75%);
+}
+
+#mullet:hover{
+    filter: grayscale(0%);
 }
 #mullet h2{
     text-align: center;
@@ -185,7 +201,12 @@ img{
     width: 500px;
     height: 300px;
     align-items: center;
-    margin: 30px;
+    margin: 45px;
+    filter: grayscale(75%);
+}
+
+#beard:hover{
+    filter: grayscale(0%);
 }
 #beard h2{
     text-align: center;
@@ -196,7 +217,12 @@ img{
     width: 500px;
     height: 300px;
     align-items: center;
-    margin: 30px;
+    margin: 45px;
+    filter: grayscale(75%);
+}
+
+#Bunny:hover{
+    filter: grayscale(0%);
 }
 #Bunny h2{
     text-align: center;
@@ -207,7 +233,12 @@ img{
     width: 500px;
     height: 300px;
     align-items: center;
-    margin: 30px;
+    margin: 45px;
+    filter: grayscale(75%);
+}
+
+#Vienna:hover{
+    filter: grayscale(0%);
 }
 #Vienna h2{
     text-align: center;
@@ -218,8 +249,14 @@ img{
     width: 500px;
     height: 300px;
     align-items: center;
-    margin: 30px;
+    margin: 45px;
+    filter: grayscale(75%);
 }
+
+#Calamari:hover{
+    filter: grayscale(0%);
+}
+
 #Calamari h2{
     text-align: center;
 }
@@ -240,7 +277,7 @@ img{
     flex-direction: column;
     box-sizing: border-box;
     align-items: center;
-    margin: 20px 0px;
+    padding-left: 700px;
 }
 .input{
     padding: 12px;
@@ -264,11 +301,96 @@ img{
     box-shadow: 0 0 10px white;
 }
 
+/* Footer */
+#social {
+    display: flex;
+    justify-content: space-between;
+    background-color: burlywood;
+    color: black;
+    align-items: center;
+    padding: 5px;
+  }
+  #social div {
+    display: flex;
+  }
+  #social p {
+    margin-top: 12px;
+    margin-right: 20px;
+  }
+  .social-links {
+    justify-content: space-between;
+  }
+  .social-links i {
+    margin: 0 3px;
+  }
+  footer{
+    position: sticky;
+    width: 100%;
+    bottom: 0;
+  }
+  
+/* Style the table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 100px;
+   }
+   
+   /* Table headers */
+   th {
+    background-color: #f0e102;
+    color: black;
+   }
+   
+   /* Table cells */
+   td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+    background-color: red;
+    color: black;
+   }
+   
+   /* Hover effect on rows
+   tr:hover {
+    background-color: red;
+   } */
+
 /* Media query */
-@media screen and (max-width){
-    
+@media only screen and (max-width: 800px){
+    nav ul{
+        position: absolute;
+        top: 70px;
+        left: 0;
+        background: #333;
+        width: 100%;
+        overflow: hidden;
+        transition: max-height 0.5s;
+    }
+    nav ul li{
+        display: block;
+        margin-right: 50px;
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+    nav ul li a{
+        color: #fff;
+    }
+    .menu-icon{
+        display:block;
+        cursor: pointer;
+    }
+    @media only screen and (max-width: 600px){
+        .row{
+            text-align:center;
+        }
+        .col-2, .col-3, .col-4{
+            flex-basis: 100%;
+        }
+    }
 }
 
+/* Animations */
 @keyframes example {
     0%   {background-color: orangered;}
     25%  {background-color: red;}
@@ -315,3 +437,4 @@ img{
     animation-duration: 4s;
     position: relative;
   }
+
