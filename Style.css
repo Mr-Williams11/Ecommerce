@@ -350,25 +350,19 @@ table {
     background-color: red;
     color: black;
    }
-   
-   /* Hover effect on rows
-   tr:hover {
-    background-color: red;
-   } */
-
 /* Media query */
 @media only screen and (max-width: 800px){
     nav ul{
-        position: absolute;
-        top: 70px;
+        position: sticky;
+        top: 0px;
         left: 0;
-        background: #333;
+        background: black;
         width: 100%;
         overflow: hidden;
         transition: max-height 0.5s;
     }
     nav ul li{
-        display: block;
+        display: flex;
         margin-right: 50px;
         margin-bottom: 10px;
         margin-top: 10px;
@@ -376,19 +370,29 @@ table {
     nav ul li a{
         color: #fff;
     }
-    .menu-icon{
-        display:block;
-        cursor: pointer;
+    .col-2{
+        flex-basis: 100%;
+        margin: 100px auto;
     }
+    body{
+        text-align: left;
+        padding-block: ;
+    }
+}
+    
     @media only screen and (max-width: 600px){
         .row{
             text-align:center;
         }
-        .col-2, .col-3, .col-4{
+        .col-2{
             flex-basis: 100%;
+            margin: 100px auto;
+        }
+        .col-3{
+            flex-basis: 100%;
+            padding-right: 200px;
         }
     }
-}
 
 /* Animations */
 @keyframes example {
@@ -437,4 +441,3 @@ table {
     animation-duration: 4s;
     position: relative;
   }
-
